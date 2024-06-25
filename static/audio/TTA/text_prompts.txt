@@ -1,0 +1,14 @@
+00000.wav: The sound of monster and creatures.
+00001.wav: The sound of foley footsteps on the concrete street.
+00002.wav: The sound of foley footsteps on the winter street.
+00003.wav: Repeated gunfire and screaming in the background.
+00004.wav: Alien robot android is speaking.
+00005.wav: Birds chirping as well as some clanking.
+00006.wav: A man is speaking under the water.
+00007.wav: A man is speaking in a huge room.
+00008.wav: A man is speaking in a small room.
+00009.wav: Chopping tomatos on a wooden table.
+00010.wav: Chopping meat on a wooden table.
+00011.wav: Chopping potatos on a metal table.
+00012.wav: Typing on a typewriter.
+00013.wav: The steady crashing of waves against the shore,high fidelity, the whooshing sound of water receding back into the ocean.

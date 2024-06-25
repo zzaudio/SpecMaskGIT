@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-MML-AM_HTMLorMML-full"> </script>
+
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="High-quality one step diffusion model sound generation.">
+  <meta property="og:title" content="Sound Consistency Trajectory Models"/>
+  <meta property="og:description" content="High-quality one step diffusion model sound generation."/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/icon.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="Sound Consistency Trajectory Models">
+  <meta name="twitter:description" content="igh-quality one step diffusion model sound generation.">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/icon.png">
+  <meta name="twitter:card" content="icon.png">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>SpecMaskGIT Demo Page</title>
+  <link rel="icon" type="image/x-icon" href="static/images/icon.png">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> -->
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">SpecMaskGIT: Masked Generative Modeling of Audio Spectrograms for Efficient Audio Synthesis and Beyond</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+            <span class="author-block">
+                <a href="https://mcomunita.github.io/" target="_blank">Marco Comunita</a><span><sup>*1#</sup></span>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?hl=en&user=iRVT3A8AAAAJ" target="_blank">Zhi Zhong</a><span><sup>*2</sup></span>,
+            </span>
+            <span class="author-block">
+                <span>Akira Takahashi</span><span><sup>1</sup></span>,
+            </span>
+            <span class="author-block">
+                <a href="https://www.shiqiyang.xyz/" target="_blank">Shiqi Yang</a><sup>2</sup></span>,
+            </span>
+            <span class="author-block">
+                <a href="https://joemzhao.github.io/" target="_blank">Mengjie Zhao</a><span><sup>2</sup></span>,
+            </span><br>
+            <span class="author-block">
+                <a href="https://scholar.google.com/citations?hl=en&user=UT-g5BAAAAAJ" target="_blank">Koichi Saito</a><span><sup>3</sup></span>,
+            </span>
+            <span class="author-block">
+                <a href="https://github.com/yukara-ikemiya" target="_blank">Yukara Ikemiya</a><span><sup>3</sup></span>,
+            </span>
+            <span class="author-block">
+                <a href="https://scholar.google.com/citations?hl=en&user=XCRO260AAAAJ" target="_blank">Takashi Shibuya</a><span><sup>3</sup></span>,
+            </span>
+            <span class="author-block">
+                <a href="https://scholar.google.com/citations?hl=en&user=_mhxayYAAAAJ" target="_blank">Shusuke Takahashi</a><span><sup>2</sup></span>,
+            </span>
+            <span class="author-block">
+                <a href="https://www.yukimitsufuji.com/" target="_blank">Yuki Mitsufuji</a><span><sup>2,3</sup></span>,
+            </span>
+            </span>
+            </div>
+            <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Queen Mary University of London, <sup>2</sup>Sony Group Corporation, <sup>3</sup>Sony AI<br>
+            <span class="author-block">
+                <sup>*</sup>Equal contribution,
+                <sup>#</sup>Work done during an internship at Sony<br>
+            <span class="author-block">
+<!--                     <span class="eql-cntrb"><small><br><center><img src="static/images/cifar_badge.svg" alt="MY ALT TEXT" width="100%"/></center></small></span> -->
+            </div>
+            <div class="column has-text-centered">
+            <div class="publication-links">
+            <!-- ArXiv abstract Link -->
+            <span class="link-block">
+            <a href="https://arxiv.org/abs/2405.18503" target="_blank"
+            class="external-link button is-normal is-rounded is-dark">
+            <span class="icon">
+                <i class="ai ai-arxiv"></i>
+            </span>
+            <span>arXiv</span>
+            </a>
+            </span>
+
+            <!-- Github link -->
+            <!--<span class="link-block">
+                <a href="https://github.com/sony/soundctm" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                <i class="fab fa-github"></i>
+                </span>
+                <span>Code</span>
+            </a>
+            </span>-->
+    </span>
+    </div>
+    </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+    <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+                <h2 class="title is-3">Abstract</h2>
+                <div class="content has-text-justified">
+                <p>
+                    Recent advances in generative models that iteratively synthesize audio clips sparked great success to text-to-audio synthesis (TTA), 
+                    but with the cost of slow synthesis speed and heavy computation. 
+                    Although there have been attempts to accelerate the iterative procedure, high-quality TTA systems remain inefficient due to hundreds of iterations required in the inference phase and large amount of model parameters. 
+                    To address the challenges, we propose SpecMaskGIT, a light-weighted, efficient yet effective TTA model based on the masked generative modeling of spectrograms. 
+                    First, SpecMaskGIT synthesizes a realistic 10-sec audio clip by less than 16 iterations, an order-of-magnitude less than previous iterative TTA methods.
+                    As a discrete model, SpecMaskGIT outperforms larger VQ-Diffusion and auto-regressive models in the TTA benchmark, while being real time with only 4 CPU cores or even 30x faster with a GPU. 
+                    Next, built upon a latent space of Mel-spectrogram, SpecMaskGIT has a wider range of applications (e.g., the zero-shot bandwidth extension) than similar methods built on the latent wave domain.
+                    Moreover, we interpret SpecMaskGIT as a generative extension to previous discriminative audio masked Transformers, and shed light on its audio representation learning potential.
+                    We hope our work inspires the exploration of masked audio modeling toward further diverse scenarios.
+                </p>
+                </div>
+            </div>
+        </div>
+  </div>
+</section>
+
+<!-- End paper abstract -->
+
+
+<section class="section hero">
+  <div class="container is-full-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-max-desktop is-full-mobile">
+        <h2 id="section_1" class="title is-3">Text-to-audio Synthesis</h2>
+        <div class="table-container">
+          <table class="table" align="center" style="table-layout: fixed;word-break: break-word; width: 100%;">
+            <thead>
+                <tr>
+                    <th scope="col" style="min-width: 200px;">Text prompts</th>
+                    <th scope="col" style="min-width: 200px;">SpecMaskGIT (AS w/ BigVSAN)</th>
+                    <th scope="col" style="min-width: 200px;">SpecMaskGIT (AS w/ HiFiGAN)</th>
+                    <th scope="col" style="min-width: 200px;">SpecMaskGIT (ACFT w/ HiFiGAN)</th>
+                    <th scope="col" style="min-width: 200px;"><a href="https://arxiv.org/pdf/2304.13731" target="_blank">TANGO</a></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><!--000-->
+                    <td>The sound of monster and creatures.</td>
+                    <td><audio controls="controls"><source src="static/audio/TTA/AS_500k_BigVSAN/00000.wav" />Your browser does not support the audio element.</audio></td>
+                    <td><audio controls="controls"><source src="static/audio/TTA/AS_500k_HiFiGAN/00000.wav" />Your browser does not support the audio element.</audio></td>
+                    <td><audio controls="controls"><source src="static/audio/TTA/AS_500k_AC_250k_HiFiGAN/00000.wav" />Your browser does not support the audio element.</audio></td>
+                    <td><audio controls="controls"><source src="static/audio/TTA/TANGO/00000.wav" />Your browser does not support the audio element.</audio></td>
+                </tr>
+                <tr><!--001-->
+                    <td>The sound of foley footsteps on the concrete street.</td>
+                    <td><audio controls="controls"><source src="static/audio/TTA/AS_500k_BigVSAN/00001.wav" />Your browser does not support the audio element.</audio></td>
+                    <td><audio controls="controls"><source src="static/audio/TTA/AS_500k_HiFiGAN/00001.wav" />Your browser does not support the audio element.</audio></td>
+                    <td><audio controls="controls"><source src="static/audio/TTA/AS_500k_AC_250k_HiFiGAN/00001.wav" />Your browser does not support the audio element.</audio></td>
+                    <td><audio controls="controls"><source src="static/audio/TTA/TANGO/00001.wav" />Your browser does not support the audio element.</audio></td>
+                </tr>
+                <tr><!--002-->
+                    <td>The sound of foley footsteps on the winter street.</td>
+                    <td><audio controls="controls"><source src="static/audio/TTA/AS_500k_BigVSAN/00002.wav" />Your browser does not support the audio element.</audio></td>
+                    <td><audio controls="controls"><source src="static/audio/TTA/AS_500k_HiFiGAN/00002.wav" />Your browser does not support the audio element.</audio></td>
+                    <td><audio controls="controls"><source src="static/audio/TTA/AS_500k_AC_250k_HiFiGAN/00002.wav" />Your browser does not support the audio element.</audio></td>
+                    <td><audio controls="controls"><source src="static/audio/TTA/TANGO/00002.wav" />Your browser does not support the audio element.</audio></td>
+                </tr>
+                <tr><!--003-->
+                    <td>Repeated gunfire and screaming in the background.</td>
+                    <td><audio controls="controls"><source src="static/audio/TTA/AS_500k_BigVSAN/00003.wav" />Your browser does not support the audio element.</audio></td>
+                    <td><audio controls="controls"><source src="static/audio/TTA/AS_500k_HiFiGAN/00003.wav" />Your browser does not support the audio element.</audio></td>
+                    <td><audio controls="controls"><source src="static/audio/TTA/AS_500k_AC_250k_HiFiGAN/00003.wav" />Your browser does not support the audio element.</audio></td>
+                    <td><audio controls="controls"><source src="static/audio/TTA/TANGO/00003.wav" />Your browser does not support the audio element.</audio></td>
+                </tr>
+                <tr><!--004-->
+                    <td>Alien robot android is speaking.</td>
+                    <td><audio controls="controls"><source src="static/audio/TTA/AS_500k_BigVSAN/00004.wav" />Your browser does not support the audio element.</audio></td>
+                    <td><audio controls="controls"><source src="static/audio/TTA/AS_500k_HiFiGAN/00004.wav" />Your browser does not support the audio element.</audio></td>
+                    <td><audio controls="controls"><source src="static/audio/TTA/AS_500k_AC_250k_HiFiGAN/00004.wav" />Your browser does not support the audio element.</audio></td>
+                    <td><audio controls="controls"><source src="static/audio/TTA/TANGO/00004.wav" />Your browser does not support the audio element.</audio></td>
+                </tr>
+                <tr><!--005-->
+                    <td>Birds chirping as well as some clanking.</td>
+                    <td><audio controls="controls"><source src="static/audio/TTA/AS_500k_BigVSAN/00005.wav" />Your browser does not support the audio element.</audio></td>
+                    <td><audio controls="controls"><source src="static/audio/TTA/AS_500k_HiFiGAN/00005.wav" />Your browser does not support the audio element.</audio></td>
+                    <td><audio controls="controls"><source src="static/audio/TTA/AS_500k_AC_250k_HiFiGAN/00005.wav" />Your browser does not support the audio element.</audio></td>
+                    <td><audio controls="controls"><source src="static/audio/TTA/TANGO/00005.wav" />Your browser does not support the audio element.</audio></td>
+                </tr>
+                <tr><!--006-->
+                    <td>A man is speaking under the water.</td>
+                    <!--006-->
+                    <td><audio controls="controls"><source src="static/audio/TTA/AS_500k_BigVSAN/00006.wav" />Your browser does not support the audio element.</audio></td>
+                    <td><audio controls="controls"><source src="static/audio/TTA/AS_500k_HiFiGAN/00006.wav" />Your browser does not support the audio element.</audio></td>
+                    <td><audio controls="controls"><source src="static/audio/TTA/AS_500k_AC_250k_HiFiGAN/00006.wav" />Your browser does not support the audio element.</audio></td>
+                    <td><audio controls="controls"><source src="static/audio/TTA/TANGO/00006.wav" />Your browser does not support the audio element.</audio></td>
+                </tr>
+                <tr>
+                    <td>A man is speaking in a huge room.</td>
+                    <!--007-->
+                    <td><audio controls="controls"><source src="static/audio/TTA/AS_500k_BigVSAN/00007.wav" />Your browser does not support the audio element.</audio></td>
+                    <td><audio controls="controls"><source src="static/audio/TTA/AS_500k_HiFiGAN/00007.wav" />Your browser does not support the audio element.</audio></td>
+                    <td><audio controls="controls"><source src="static/audio/TTA/AS_500k_AC_250k_HiFiGAN/00007.wav" />Your browser does not support the audio element.</audio></td>
+                    <td><audio controls="controls"><source src="static/audio/TTA/TANGO/00007.wav" />Your browser does not support the audio element.</audio></td>
+                </tr>
+                <tr>
+                    <td>A man is speaking in a small room.</td>
+                    <!--008-->
+                    <td><audio controls="controls"><source src="static/audio/TTA/AS_500k_BigVSAN/00008.wav" />Your browser does not support the audio element.</audio></td>
+                    <td><audio controls="controls"><source src="static/audio/TTA/AS_500k_HiFiGAN/00008.wav" />Your browser does not support the audio element.</audio></td>
+                    <td><audio controls="controls"><source src="static/audio/TTA/AS_500k_AC_250k_HiFiGAN/00008.wav" />Your browser does not support the audio element.</audio></td>
+                    <td><audio controls="controls"><source src="static/audio/TTA/TANGO/00008.wav" />Your browser does not support the audio element.</audio></td>
+                </tr>
+                <tr>
+                    <td>Chopping tomatos on a wooden table.</td>
+                    <!--009-->
+                    <td><audio controls="controls"><source src="static/audio/TTA/AS_500k_BigVSAN/00009.wav" />Your browser does not support the audio element.</audio></td>
+                    <td><audio controls="controls"><source src="static/audio/TTA/AS_500k_HiFiGAN/00009.wav" />Your browser does not support the audio element.</audio></td>
+                    <td><audio controls="controls"><source src="static/audio/TTA/AS_500k_AC_250k_HiFiGAN/00009.wav" />Your browser does not support the audio element.</audio></td>
+                    <td><audio controls="controls"><source src="static/audio/TTA/TANGO/00009.wav" />Your browser does not support the audio element.</audio></td>
+                </tr>
+                <tr>
+                    <td>Chopping meat on a wooden table.</td>
+                    <!--010-->
+                    <td><audio controls="controls"><source src="static/audio/TTA/AS_500k_BigVSAN/00010.wav" />Your browser does not support the audio element.</audio></td>
+                    <td><audio controls="controls"><source src="static/audio/TTA/AS_500k_HiFiGAN/00010.wav" />Your browser does not support the audio element.</audio></td>
+                    <td><audio controls="controls"><source src="static/audio/TTA/AS_500k_AC_250k_HiFiGAN/00010.wav" />Your browser does not support the audio element.</audio></td>
+                    <td><audio controls="controls"><source src="static/audio/TTA/TANGO/00010.wav" />Your browser does not support the audio element.</audio></td>
+                </tr>
+                <tr>
+                    <td>Chopping potatos on a metal table.</td>
+                    <!--011-->
+                    <td><audio controls="controls"><source src="static/audio/TTA/AS_500k_BigVSAN/00011.wav" />Your browser does not support the audio element.</audio></td>
+                    <td><audio controls="controls"><source src="static/audio/TTA/AS_500k_HiFiGAN/00011.wav" />Your browser does not support the audio element.</audio></td>
+                    <td><audio controls="controls"><source src="static/audio/TTA/AS_500k_AC_250k_HiFiGAN/00011.wav" />Your browser does not support the audio element.</audio></td>
+                    <td><audio controls="controls"><source src="static/audio/TTA/TANGO/00011.wav" />Your browser does not support the audio element.</audio></td>
+                </tr>
+                <tr>
+                    <td>Typing on a typewriter.</td>
+                    <!--012-->
+                    <td><audio controls="controls"><source src="static/audio/TTA/AS_500k_BigVSAN/00012.wav" />Your browser does not support the audio element.</audio></td>
+                    <td><audio controls="controls"><source src="static/audio/TTA/AS_500k_HiFiGAN/00012.wav" />Your browser does not support the audio element.</audio></td>
+                    <td><audio controls="controls"><source src="static/audio/TTA/AS_500k_AC_250k_HiFiGAN/00012.wav" />Your browser does not support the audio element.</audio></td>
+                    <td><audio controls="controls"><source src="static/audio/TTA/TANGO/00012.wav" />Your browser does not support the audio element.</audio></td>
+                </tr>
+                <tr>
+                    <td>The steady crashing of waves against the shore,high fidelity, the whooshing sound of water receding back into the ocean.</td>
+                    <!--013-->
+                    <td><audio controls="controls"><source src="static/audio/TTA/AS_500k_BigVSAN/00013.wav" />Your browser does not support the audio element.</audio></td>
+                    <td><audio controls="controls"><source src="static/audio/TTA/AS_500k_HiFiGAN/00013.wav" />Your browser does not support the audio element.</audio></td>
+                    <td><audio controls="controls"><source src="static/audio/TTA/AS_500k_AC_250k_HiFiGAN/00013.wav" />Your browser does not support the audio element.</audio></td>
+                    <td><audio controls="controls"><source src="static/audio/TTA/TANGO/00013.wav" />Your browser does not support the audio element.</audio></td>
+                </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section hero">
+    <div class="container is-full-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-max-desktop is-full-mobile">
+          <h2 id="section_3" class="title is-3">Zero-shot Bandwidth Extension (BWE) and Time Inpainting</h2>
+          <div class="table-container">
+            <table class="table" align="center" style="table-layout: fixed;word-break: break-word; width: 100%;">
+              <thead>
+                <tr>
+                  <th scope="col" style="min-width: 200px;">Unprocessed</th>
+                  <th scope="col" style="min-width: 200px;">SpecMaskGIT AS HiFiGAN</th>
+                  <th scope="col" style="min-width: 200px;">  - w/ LFR</th>
+                  <th scope="col" style="min-width: 200px;">Ground truth</th>
+                </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td><audio controls="controls"><source src="static/audio/BWE/unprocessed/00001.wav" />Your browser does not support the audio element.</audio><br>
+                          <img src="static/images/BWE/unprocessed/00001.png" alt="Features"></td>
+                      <td><audio controls="controls"><source src="static/audio/BWE/SpecMaskGIT_zero_shot/00001.wav" />Your browser does not support the audio element.</audio><br>
+                          <img src="static/images/BWE/SpecMaskGIT_zero_shot/00001.png" alt="Features"></td>
+                      <td><audio controls="controls"><source src="static/audio/BWE/SpecMaskGIT_zero_shot_with_LFR/00001.wav" />Your browser does not support the audio element.</audio><br>
+                          <img src="static/images/BWE/SpecMaskGIT_zero_shot_with_LFR/00001.png" alt="Features"></td>
+                      <td><audio controls="controls"><source src="static/audio/BWE/Gounrd_truth/00001.wav" />Your browser does not support the audio element.</audio><br>
+                          <img src="static/images/BWE/Gounrd_truth/00001.png" alt="Features"></td>
+                  </tr>
+                  <tr>
+                      <td><audio controls="controls"><source src="static/audio/BWE/unprocessed/00004.wav" />Your browser does not support the audio element.</audio><br>
+                          <img src="static/images/BWE/unprocessed/00004.png" alt="Features"></td>
+                      <td><audio controls="controls"><source src="static/audio/BWE/SpecMaskGIT_zero_shot/00004.wav" />Your browser does not support the audio element.</audio><br>
+                          <img src="static/images/BWE/SpecMaskGIT_zero_shot/00004.png" alt="Features"></td>
+                      <td><audio controls="controls"><source src="static/audio/BWE/SpecMaskGIT_zero_shot_with_LFR/00004.wav" />Your browser does not support the audio element.</audio><br>
+                          <img src="static/images/BWE/SpecMaskGIT_zero_shot_with_LFR/00004.png" alt="Features"></td>
+                      <td><audio controls="controls"><source src="static/audio/BWE/Gounrd_truth/00004.wav" />Your browser does not support the audio element.</audio><br>
+                          <img src="static/images/BWE/Gounrd_truth/00004.png" alt="Features"></td>
+                  </tr>
+                  <tr>
+                      <td><audio controls="controls"><source src="static/audio/BWE/unprocessed/00006.wav" />Your browser does not support the audio element.</audio><br>
+                          <img src="static/images/BWE/unprocessed/00006.png" alt="Features"></td>
+                      <td><audio controls="controls"><source src="static/audio/BWE/SpecMaskGIT_zero_shot/00006.wav" />Your browser does not support the audio element.</audio><br>
+                          <img src="static/images/BWE/SpecMaskGIT_zero_shot/00006.png" alt="Features"></td>
+                      <td><audio controls="controls"><source src="static/audio/BWE/SpecMaskGIT_zero_shot_with_LFR/00006.wav" />Your browser does not support the audio element.</audio><br>
+                          <img src="static/images/BWE/SpecMaskGIT_zero_shot_with_LFR/00006.png" alt="Features"></td>
+                      <td><audio controls="controls"><source src="static/audio/BWE/Gounrd_truth/00006.wav" />Your browser does not support the audio element.</audio><br>
+                          <img src="static/images/BWE/Gounrd_truth/00006.png" alt="Features"></td>
+                  </tr>
+                  <tr>
+                      <td><audio controls="controls"><source src="static/audio/BWE/unprocessed/00042.wav" />Your browser does not support the audio element.</audio><br>
+                          <img src="static/images/BWE/unprocessed/00042.png" alt="Features"></td>
+                      <td><audio controls="controls"><source src="static/audio/BWE/SpecMaskGIT_zero_shot/00042.wav" />Your browser does not support the audio element.</audio><br>
+                          <img src="static/images/BWE/SpecMaskGIT_zero_shot/00042.png" alt="Features"></td>
+                      <td><audio controls="controls"><source src="static/audio/BWE/SpecMaskGIT_zero_shot_with_LFR/00042.wav" />Your browser does not support the audio element.</audio><br>
+                          <img src="static/images/BWE/SpecMaskGIT_zero_shot_with_LFR/00042.png" alt="Features"></td>
+                      <td><audio controls="controls"><source src="static/audio/BWE/Gounrd_truth/00042.wav" />Your browser does not support the audio element.</audio><br>
+                          <img src="static/images/BWE/Gounrd_truth/00042.png" alt="Features"></td>
+                  </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="table-container">
+              <table class="table" align="center" style="table-layout: fixed;word-break: break-word; width: 100%;">
+                <thead>
+                  <tr>
+                    <th scope="col" style="min-width: 200px;">Unprocessed</th>
+                    <th scope="col" style="min-width: 200px;">SpecMaskGIT AS HiFiGAN</th>
+                    <th scope="col" style="min-width: 200px;">Ground truth</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><audio controls="controls"><source src="static/audio/Time_inpaint/unprocessed/00001.wav" />Your browser does not support the audio element.</audio><br>
+                            <img src="static/images/Time_inpaint/unprocessed/00001.png" alt="Features"></td>
+                        <td><audio controls="controls"><source src="static/audio/Time_inpaint/SpecMaskGIT_zero_shot/00001.wav" />Your browser does not support the audio element.</audio><br>
+                            <img src="static/images/Time_inpaint/SpecMaskGIT_zero_shot/00001.png" alt="Features"></td>
+                        <td><audio controls="controls"><source src="static/audio/Time_inpaint/Gounrd_truth/00001.wav" />Your browser does not support the audio element.</audio><br>
+                            <img src="static/images/Time_inpaint/Gounrd_truth/00001.png" alt="Features"></td>
+                    </tr>
+                    <tr>
+                        <td><audio controls="controls"><source src="static/audio/Time_inpaint/unprocessed/00004.wav" />Your browser does not support the audio element.</audio><br>
+                            <img src="static/images/Time_inpaint/unprocessed/00004.png" alt="Features"></td>
+                        <td><audio controls="controls"><source src="static/audio/Time_inpaint/SpecMaskGIT_zero_shot/00004.wav" />Your browser does not support the audio element.</audio><br>
+                            <img src="static/images/Time_inpaint/SpecMaskGIT_zero_shot/00004.png" alt="Features"></td>
+                        <td><audio controls="controls"><source src="static/audio/Time_inpaint/Gounrd_truth/00004.wav" />Your browser does not support the audio element.</audio><br>
+                            <img src="static/images/Time_inpaint/Gounrd_truth/00004.png" alt="Features"></td>
+                    </tr>
+                    <tr>
+                        <td><audio controls="controls"><source src="static/audio/Time_inpaint/unprocessed/00006.wav" />Your browser does not support the audio element.</audio><br>
+                            <img src="static/images/Time_inpaint/unprocessed/00006.png" alt="Features"></td>
+                        <td><audio controls="controls"><source src="static/audio/Time_inpaint/SpecMaskGIT_zero_shot/00006.wav" />Your browser does not support the audio element.</audio><br>
+                            <img src="static/images/Time_inpaint/SpecMaskGIT_zero_shot/00006.png" alt="Features"></td>
+                        <td><audio controls="controls"><source src="static/audio/Time_inpaint/Gounrd_truth/00006.wav" />Your browser does not support the audio element.</audio><br>
+                            <img src="static/images/Time_inpaint/Gounrd_truth/00006.png" alt="Features"></td>
+                    </tr>
+                    <tr>
+                        <td><audio controls="controls"><source src="static/audio/Time_inpaint/unprocessed/00042.wav" />Your browser does not support the audio element.</audio><br>
+                            <img src="static/images/Time_inpaint/unprocessed/00042.png" alt="Features"></td>
+                        <td><audio controls="controls"><source src="static/audio/Time_inpaint/SpecMaskGIT_zero_shot/00042.wav" />Your browser does not support the audio element.</audio><br>
+                            <img src="static/images/Time_inpaint/SpecMaskGIT_zero_shot/00042.png" alt="Features"></td>
+                        <td><audio controls="controls"><source src="static/audio/Time_inpaint/Gounrd_truth/00042.wav" />Your browser does not support the audio element.</audio><br>
+                            <img src="static/images/Time_inpaint/Gounrd_truth/00042.png" alt="Features"></td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+<section class="section hero">
+  <div class="container is-full-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-max-desktop is-full-mobile">
+        <h2 id="section_2" class="title is-3">Representation Learning: Linear Probing</h2>
+        <div class="table-container">
+            ROC-AUC and mAP for the multi-label music tagging on the MagnaTagATune dataset. Bold: Top-2 results.
+          <table class="table" align="center" style="table-layout: fixed;word-break: break-word; width: 100%;">
+            <thead>
+              <tr>
+                <th scope="col" style="min-width: 200px;">Model</th>
+                <th scope="col" style="min-width: 200px;">ROC</th>
+                <th scope="col" style="min-width: 200px;">mAP</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="https://arxiv.org/abs/2103.09410" target="_blank">CLMR</a></td>
+                    <td>89.4</td>
+                    <td>36.1</td>
+                </tr>
+                <tr>
+                    <td><a href="https://arxiv.org/abs/2306.00107" target="_blank">Data2vec-music</a></td>
+                    <td>90.0</td>
+                    <td>36.2</td>
+                </tr>
+                <tr>
+                    <td><a href="https://arxiv.org/abs/2306.00107" target="_blank">HuBERT-music</a></td>
+                    <td>90.2</td>
+                    <td>37.7</td>
+                </tr>
+                <tr>
+                    <td><a href="https://arxiv.org/abs/1909.06654" target="_blank">MusiCNN</a></td>
+                    <td>90.6</td>
+                    <td>38.3</td>
+                </tr>
+                <tr>
+                    <td><a href="https://arxiv.org/abs/2111.12124" target="_blank">SlowFast-NFNet-F0</a></td>
+                    <td>-</td>
+                    <td>39.5</td>
+                </tr>
+                <tr>
+                    <td><a href="https://arxiv.org/abs/2306.00107" target="_blank">MERT-330M</a></td>
+                    <td>91.3</td>
+                    <td>40.2</td>
+                </tr>
+                <tr>
+                    <td><a href="https://arxiv.org/abs/2210.03799" target="_blank">MULE-contrastive</a></td>
+                    <td><b>91.4</b></td>
+                    <td>40.4</td>
+                </tr>
+                <tr>
+                    <td><a href="https://arxiv.org/abs/2107.05677" target="_blank">Jukebox</a></td>
+                    <td><b>91.5</b></td>
+                    <td><b>41.4</b></td>
+                </tr>
+                <tr>
+                    <td>SpecMaskGIT (ours)</td>
+                    <td><b>91.5</b></td>
+                    <td><b>40.5</b></td>
+                </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>
+        To be updated
+        <!--
+        @article{saito2024soundctm,
+        title={SoundCTM: Uniting Score-based and Consistency Models for Text-to-Sound Generation}, 
+        author={Koichi Saito and Dongjun Kim and Takashi Shibuya and Chieh-Hsin Lai and Zhi Zhong and Yuhta Takida and Yuki Mitsufuji},
+        journal={arXiv preprint arXiv:2405.18503},
+        year={2024}
+        }
+        -->
+      </code></pre>
+    </div>
+</section>
+
+<!--End BibTex citation -->
+
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
